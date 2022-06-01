@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<h3 style="text-align:center;padding-top:30px;padding-bottom:10px;font-family:Josefin Sans;">ADD MOVIE</h3>
+<form method="POST"  enctype="multipart/form-data" style="text-align:center;">
+  {% csrf_token %}
+
+  <input type="text" name="name" placeholder="Movie Name" style="text-align:center;padding-bottom:5px;"><br>
+
+  <input type="text" name="desc" placeholder="Movie Description" style="text-align:center;padding-bottom:5px;"><br>
+
+  <input type="text"  name="year" placeholder="Movie Year" style="text-align:center;padding-bottom:5px;"><br>
+  <label><b>Insert Image</b></label>
+  <input type="file" name="img"><br><br>
+  <input type="submit">
+
+</form>
+{% endblock %}
